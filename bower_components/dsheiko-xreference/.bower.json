@@ -1,0 +1,27 @@
+{
+  "name": "dsheiko-xreference",
+  "description": "This web-component retrieves and displays a fragment of a specified external resource matching given grep condition or selector",
+  "license": "MIT",
+  "keywords": [
+    "element",
+    "web-components",
+    "x-tag"
+  ],
+  "main": [
+    "src/dsheiko-xreference.html"
+  ],
+  "dependencies": {
+    "platform": "Polymer/platform#~0.3.3",
+    "x-tag-core": "~0.9.7"
+  },
+  "homepage": "https://github.com/dsheiko/x-reference-xtag",
+  "_release": "2e330fffda",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2e330fffdacfc7a3000f37fa2779b873ba3dbbeb"
+  },
+  "_source": "git://github.com/dsheiko/x-reference-xtag.git",
+  "_target": "*",
+  "_originalSource": "dsheiko-xreference"
+}

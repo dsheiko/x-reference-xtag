@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!-- Importing Web Component's Polyfill -->
+    <script src="./bower_components/platform/platform.js"></script>
+
+    <!-- Importing Custom Elements -->
+    <link rel="import" href="./bower_components/dsheiko-xreference/src/dsheiko-xreference.html">
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -35,6 +41,29 @@
 
 <p>This web-component introduces a custom element <code>dsheiko-xreference</code> that retrieves and displays a fragment of
 a specified external resource matching given grep condition or selector</p>
+
+<h2>Demo</h2>
+
+    <p>
+      Checking general behaviour of the element: We are expected to obtain external resource fragment
+      <dsheiko-xreference href="./dummy-ext-resource.html?rel=author&" locator="#cite">
+          <!-- Fallback -->
+          <a target="_blank" href="./dummy-ext-resource.html?rel=author">by locator</a>
+      </dsheiko-xreference>
+      or
+      <dsheiko-xreference href="./dummy-ext-resource.html?rel=author&" grep="(Lorem.+nulla\.)">
+          <!-- Fallback -->
+          <a target="_blank" href="./dummy-ext-resource.html?rel=author">by grep</a>
+      </dsheiko-xreference>
+    </p>
+    <p>
+      Obviously, we cannot bypass Same-Origin Policy while accessing an arbitrary external resource with JavaScript. However we can do it via a proxy:
+      <dsheiko-xreference href="./proxy.php?url=http://css-tricks.com/modular-future-web-components%3Frel%3Dauthor%26" grep="(That\'s a decent.+like\?)">
+          <!-- Fallback -->
+          <a target="_blank" href="http://css-tricks.com/modular-future-web-components">click me</a>
+      </dsheiko-xreference>
+    </p>
+
 
 <h2>
 <a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
@@ -139,6 +168,6 @@ a specified external resource matching given grep condition or selector</p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+
   </body>
 </html>
