@@ -1,6 +1,6 @@
 ## Overview
 
-This web-component introduces a custom element `x-reference` that retrieves and displays a fragment of
+This web-component introduces a custom element `dsheiko-xreference` that retrieves and displays a fragment of
 a specified external resource matching given grep condition or selector
 
 ## Install
@@ -8,10 +8,10 @@ a specified external resource matching given grep condition or selector
 Install the component using [Bower](http://bower.io/):
 
 ```sh
-$ bower install dsheiko/x-reference --save
+$ bower install dsheiko-xreference --save
 ```
 
-Or [download as ZIP](https://github.com/dsheiko/x-reference).
+Or [download as ZIP](https://github.com/dsheiko/x-reference-xtag).
 
 ## Usage
 
@@ -24,22 +24,22 @@ Or [download as ZIP](https://github.com/dsheiko/x-reference).
 2. Import Custom Element:
 
     ```html
-    <link rel="import" href="../src/x-reference.html">
+    <link rel="import" href="../src/dsheiko-xreference.html">
     ```
 
 3. Start using it!
 
     You can extract a fragment by CSS selector:
     ```html
-    <x-reference href="url-address" locator="a-CSS-selector">
+    <dsheiko-xreference href="url-address" locator="a-CSS-selector">
         Text content
-    </x-reference>
+    </dsheiko-xreference>
     ```
     or you can use a regexp condition:
     ```html
-    <x-reference href="url-address" grep="reg-exp">
+    <dsheiko-xreference href="url-address" grep="reg-exp">
         Text content
-    </x-reference>
+    </dsheiko-xreference>
     ```
 
 
